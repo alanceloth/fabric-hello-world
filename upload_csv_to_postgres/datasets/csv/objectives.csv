@@ -1,0 +1,5 @@
+_id,name,description,entity,key,display,objective,displayUnit,type
+647ded89866b5961f5a3e203,Perda de Peso,Perda de Peso,Impedances,weightkg,number,lose_weight,kg,WEIGHT_LOSS
+647dedb1866b5961f5a3e204,Consistência,Consistência,Impedances,weightkg,number,maintenance,kg,CONSISTENCY
+647dedc3866b5961f5a3e205,Ganho de Massa,Ganho de Massa,Impedances,skeletalMuscleKg,number,body_mass,kg,MUSCLE_GAIN
+647dedd3866b5961f5a3e206,Perda de Gordura,Perda de Gordura,Impedances,bodyFatPercent,percentage,performance,%,FAT_LOSS
