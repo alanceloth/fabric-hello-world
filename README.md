@@ -20,10 +20,13 @@
 # pgAdmin usando apenas Docker
 
 ## Build container
+```bash
 docker build -t my-pgadmin .
-
+```
 ## Run Container
+```bash
 docker run -d --name pgadmin-container -p 8080:80 my-pgadmin
+```
 
 ---
 # pgAdmin usando Makefile
