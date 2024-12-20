@@ -146,13 +146,17 @@ No exemplo, vamos usar o Data Pipeline.
 - Se não for a primeira source, será necessário mapear a source nova com o componente `Copy data`
 - Aponte o destino para o lakehouse
 
-### Criando uma tabela a partir de um arquivo e navegando na tabela
+## Criando uma tabela a partir de um arquivo e navegando na tabela
 - Clique nos `...` do arquivo que deseja transformar em tabela e clique em Load to Tables -> New Table
 - Troque para `SQL analytics endpoint` a visualização do ambiente
 - Selecione `New SQL query`
     - Faça suas querys como desejar utilizando SQL
     - Teste as outras opções como `New visual query` e `New SQL query in notebook`
 
-### Criando um Report no Power BI
+## Criando etapas de transformação de dados
+
+[EM DESENVOLVIMENTO ⚠]
+
+## Criando um Report no Power BI
 - No topo ao lado de Home, clique em Reporting -> New report
 
