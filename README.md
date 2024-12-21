@@ -1,3 +1,7 @@
+# Diagrama do projeto
+
+![image](imgs/project.png)
+
 # Criar uma conta trial no Fabric
 
 ## Portal Azure - Criando o usuário
