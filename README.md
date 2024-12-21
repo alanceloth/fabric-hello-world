@@ -153,10 +153,30 @@ No exemplo, vamos usar o Data Pipeline.
     - Faça suas querys como desejar utilizando SQL
     - Teste as outras opções como `New visual query` e `New SQL query in notebook`
 
+## Criando uma ingestão de dados de API
+- No menu lateral, clique em Create
+- Data Pipeline
+- Use o `Copy data assistant`
+- Digite `Http` na barra de busca e selecione essa source
+- Na url coloque o endpoint de interesse, por exemplo `https://api.coinbase.com/v2/prices/BTC-USD/spot`
+- Na proxima tela nao precisa configurar nada por enquanto, next
+- Na tela do file format, ela demora alguns segundos para carregar. Altere para JSON, next.
+- Destino utilize um lakehouse já criado 
+- Salve como arquivo, especifique um path de pasta `raw_btcusd` por exemplo
+- Nome do arquivo utilize variáveis de timestamp dinamicas, exemplo: `@utcNow()`
+- Adicione um scheduler (aba Run no menu ao topo), por exemplo, a cada 15 min
+
 ## Criando etapas de transformação de dados
 
-[EM DESENVOLVIMENTO ⚠]
+### Notebook Spark
+- Crie um Notebook
+    - Use o código exemplo fornecido na pasta `spark_notebook/transform_json_to_table.py` para obter os arquivos JSON do lakehouse e criar uma tabela Delta estruturada
+    - Use o código com estratégia CDC (Change data capture) `spark_notebook/transform_json_to_table_cdc.py` para uma ingestão de dados mais eficiente
+- Em outro Notebook, vamos criar um código para deduplicar os dados de ingestão da RAW em uma tabela Staging, use o código `spark_notebook/stg_bitcoin_prices.py`
+- Adicione ambos os notebooks criados como etapas da pipeline de extração de dados criada anteriormente (isso vai executar os notebooks após a extração da API)
 
 ## Criando um Report no Power BI
+- Abra o lakewarehouse
 - No topo ao lado de Home, clique em Reporting -> New report
+- Crie seu report no Power BI
 
